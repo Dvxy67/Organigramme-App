@@ -1,66 +1,209 @@
 export const organigrammeData = {
-    direction: {
-      id: 1,
-      nom: "Marie Dupont",
-      poste: "Directrice Générale",
-      departement: "Direction",
-      email: "marie.dupont@entreprise.com"
+  id: 'direction-generale',
+  name: 'Stéphane Crickx',
+  role: 'Directeur Général',
+  department: 'Direction',
+  focus: "Vision stratégique & gouvernance de l'entreprise",
+  children: [
+    {
+      id: 'direction-rh',
+      name: 'Aurélie Alexandre',
+      role: 'Directrice RH',
+      department: 'Ressources Humaines',
+      focus: "Culture d'entreprise & accompagnement des talents",
+      children: [
+        {
+          id: 'hr-business-partner',
+          name: 'Caterina Siina',
+          role: 'HR Business Partner',
+          department: 'Ressources Humaines',
+          focus: 'Accompagnement RH des équipes tech & produit',
+        },
+        {
+          id: 'hr-generalist',
+          name: 'Thomas Purcaro',
+          role: 'HR Generalist',
+          department: 'Ressources Humaines',
+          focus: 'Recrutement, onboardings & suivi des carrières',
+        },
+        {
+          id: 'hr-payroll-officer',
+          name: 'Émilie Durieux',
+          role: 'HR & Payroll Officer',
+          department: 'Ressources Humaines',
+          focus: 'Gestion de la paie et dossiers administratifs',
+        },
+      ],
     },
-    managers: [
-      {
-        id: 2,
-        nom: "Pierre Martin",
-        poste: "Directeur Technique",
-        departement: "IT",
-        email: "pierre.martin@entreprise.com"
-      },
-      {
-        id: 3,
-        nom: "Sophie Lambert",
-        poste: "Directrice RH",
-        departement: "Ressources Humaines",
-        email: "sophie.lambert@entreprise.com"
-      },
-      {
-        id: 4,
-        nom: "Thomas Dubois",
-        poste: "Directeur Commercial",
-        departement: "Ventes",
-        email: "thomas.dubois@entreprise.com"
-      }
-    ],
-    employes: [
-      {
-        id: 5,
-        nom: "Julie Moreau",
-        poste: "Développeuse Senior",
-        departement: "IT",
-        manager: "Pierre Martin",
-        email: "julie.moreau@entreprise.com"
-      },
-      {
-        id: 6,
-        nom: "Antoine Rousseau",
-        poste: "Designer UI/UX",
-        departement: "IT",
-        manager: "Pierre Martin",
-        email: "antoine.rousseau@entreprise.com"
-      },
-      {
-        id: 7,
-        nom: "Camille Leroy",
-        poste: "Responsable Recrutement",
-        departement: "Ressources Humaines",
-        manager: "Sophie Lambert",
-        email: "camille.leroy@entreprise.com"
-      },
-      {
-        id: 8,
-        nom: "Nicolas Bernard",
-        poste: "Commercial Senior",
-        departement: "Ventes",
-        manager: "Thomas Dubois",
-        email: "nicolas.bernard@entreprise.com"
-      }
-    ]
-  };
+    {
+      id: 'direction-technique',
+      name: 'Pierre Martin',
+      role: 'Directeur Technique',
+      department: 'Informatique',
+      focus: 'Architecture produit & innovation technologique',
+      children: [
+        {
+          id: 'it-development',
+          name: 'Julie Moreau',
+          role: 'Responsable Développement',
+          department: 'Informatique',
+          focus: 'Pilotage des squads & qualité logicielle',
+          children: [
+            {
+              id: 'lead-frontend',
+              name: 'Lucas Perrin',
+              role: 'Lead Front-end',
+              department: 'Informatique',
+              focus: 'Expérience utilisateur & design system',
+            },
+            {
+              id: 'lead-backend',
+              name: 'Inès Robert',
+              role: 'Lead Back-end',
+              department: 'Informatique',
+              focus: 'Architecture API & sécurité des données',
+            },
+          ],
+        },
+        {
+          id: 'it-product-design',
+          name: 'Antoine Rousseau',
+          role: 'Responsable Produit & Design',
+          department: 'Informatique',
+          focus: "Design d'expérience & feuille de route produit",
+          children: [
+            {
+              id: 'product-designer',
+              name: 'Léna Faure',
+              role: 'Product Designer',
+              department: 'Informatique',
+              focus: 'Maquettes, ateliers utilisateurs & design ops',
+            },
+            {
+              id: 'ux-researcher',
+              name: 'Omar Belaid',
+              role: 'UX Researcher',
+              department: 'Informatique',
+              focus: 'Études utilisateurs & discovery continue',
+            },
+          ],
+        },
+        {
+          id: 'it-operations',
+          name: 'Myriam Haddad',
+          role: 'IT Operations Manager',
+          department: 'Informatique',
+          focus: 'Infrastructures, sécurité & support utilisateurs',
+          children: [
+            {
+              id: 'it-officer',
+              name: 'Gary Bourdon',
+              role: 'IT Officer',
+              department: 'Informatique',
+              focus: 'Gestion du parc & support de proximité',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'direction-commerciale',
+      name: 'Thomas Dubois',
+      role: 'Directeur Commercial',
+      department: 'Commercial',
+      focus: 'Développement des ventes & partenariats clés',
+      children: [
+        {
+          id: 'sales-key-accounts',
+          name: 'Nicolas Bernard',
+          role: 'Responsable Comptes Clés',
+          department: 'Commercial',
+          focus: 'Suivi et croissance des grands comptes',
+        },
+        {
+          id: 'sales-business-dev',
+          name: 'Eva Rolland',
+          role: 'Business Developer',
+          department: 'Commercial',
+          focus: 'Prospection & lancement de nouvelles offres',
+        },
+        {
+          id: 'sales-partnerships',
+          name: 'Amir Koulibaly',
+          role: 'Responsable Partenariats',
+          department: 'Commercial',
+          focus: 'Alliances stratégiques & réseau revendeurs',
+        },
+      ],
+    },
+    {
+      id: 'direction-finance',
+      name: 'Élise Garnier',
+      role: 'Directrice Financière',
+      department: 'Finance',
+      focus: 'Pilotage financier & conformité réglementaire',
+      children: [
+        {
+          id: 'finance-accounting',
+          name: 'Paul Henry',
+          role: 'Comptable Senior',
+          department: 'Finance',
+          focus: 'Clôtures, fiscalité & relations cabinets externes',
+        },
+        {
+          id: 'finance-controlling',
+          name: 'Mila Cohen',
+          role: 'Contrôleuse de Gestion',
+          department: 'Finance',
+          focus: 'Suivi budgétaire & analyse de performance',
+        },
+        {
+          id: 'finance-payroll',
+          name: 'Claire Ben Amar',
+          role: 'Responsable Paie',
+          department: 'Finance',
+          focus: 'Gestion de la paie multi-sites & conformité sociale',
+        },
+      ],
+    },
+    {
+      id: 'direction-operations',
+      name: 'Nadia Lefèvre',
+      role: 'Directrice des Opérations',
+      department: 'Opérations',
+      focus: 'Expérience collaborateurs & excellence opérationnelle',
+      children: [
+        {
+          id: 'operations-facility',
+          name: 'Aurélien Masson',
+          role: 'Responsable Services Généraux',
+          department: 'Support',
+          focus: 'Facility management & sécurité des locaux',
+          children: [
+            {
+              id: 'facility-team',
+              name: 'Équipe Facility',
+              role: 'Coordinateurs Facility',
+              department: 'Support',
+              focus: 'Logistique, accueil & services quotidiens',
+            },
+          ],
+        },
+        {
+          id: 'operations-office',
+          name: 'Sonia Petit',
+          role: 'Office Manager',
+          department: 'Opérations',
+          focus: 'Organisation des événements & onboardings',
+        },
+        {
+          id: 'operations-quality',
+          name: 'Hugo Lefort',
+          role: 'Responsable Qualité',
+          department: 'Opérations',
+          focus: 'Amélioration continue & audits internes',
+        },
+      ],
+    },
+  ],
+};
